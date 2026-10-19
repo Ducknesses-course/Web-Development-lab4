@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogue>
+  <book id="B001">
+    <title>The Cartographer's Daughter</title>
+    <author>Nina Harper</author>
+    <price currency="NZD">39.99</price>
+  </book>
+  <book id="B002">
+    <title>Signals Across the Harbour</title>
+    <author>Mateo Silva</author>
+    <price currency="NZD">44.50</price>
+  </book>
+  <book id="B003">
+    <title>A Field Guide to Quiet Places</title>
+    <author>Elena Wu</author>
+    <price currency="NZD">32.00</price>
+  </book>
+</catalogue>
