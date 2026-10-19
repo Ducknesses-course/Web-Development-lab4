@@ -3,8 +3,18 @@
 ## Pages
 
 - `index.html` - links to the two demo pages
-- `books.html` - loads `book.xml` and displays the books
-- `profiles.html` - loads `userProfiles.json` and displays the profiles
+- `books.html` - fetches `book.xml`, parses it with `DOMParser`, and displays the books
+- `profiles.html` - fetches `userProfiles.json`, parses it with `response.json()`, and displays the profiles
+
+## Fetch implementation
+
+Both pages use the `async/await` pattern demonstrated in `week5demo`:
+
+1. `await fetch(...)`
+2. Check `response.ok` and throw an error for HTTP failures
+3. Read the body with `response.text()` for XML or `response.json()` for JSON
+4. Render the data
+5. Catch errors with `try/catch`
 
 ## Run
 
