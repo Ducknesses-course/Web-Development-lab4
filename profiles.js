@@ -21,22 +21,18 @@ function formatAddress(address = {}) {
 
 async function loadProfiles() {
   try {
-    // 1. Fetch the JSON file.
+    //Fetch the JSON file.
     const response = await fetch("userProfiles.json");
-
-    // fetch() only rejects for network failures. Check HTTP errors explicitly.
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }
-
-    // 2. Parse the response body directly as JSON.
     const profiles = await response.json();
 
     if (!Array.isArray(profiles) || profiles.length === 0) {
       throw new Error("userProfiles.json must contain a non-empty array.");
     }
 
-    // 3. Render each profile in the page.
+    //rendering data on page
     profilesContainer.innerHTML = profiles.map((profile) => {
       const address = profile.address ?? {};
       const preferences = profile.preferences ?? {};
